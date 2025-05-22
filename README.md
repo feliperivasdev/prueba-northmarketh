@@ -97,8 +97,14 @@ python app.py
 
 **Usuarios de prueba disponibles:**
 
-- *Usuario:* `DavidGustin`
-- *Contraseña:* `prueba2025`
+- *Usuario:*
+```bash
+DavidGustin
+```
+- *contraseña:*
+```bash
+prueba2025
+```
 
 **Funcionalidades:**
 
