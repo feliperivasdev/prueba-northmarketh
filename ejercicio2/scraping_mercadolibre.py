@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def buscar_productos(palabra_clave="laptop"):
+def buscar_productos(palabra_clave=""):
     url = f"https://listado.mercadolibre.com.co/{palabra_clave}"
     headers = {"User-Agent": "Mozilla/5.0"}
 
