@@ -97,13 +97,13 @@ python app.py
 ---
 
 ### ✅ Ejercicio 4: Scraping de Seguidores de Instagram
-**Archivo:** `ejercicio4_instagram/scrape_instagram.py`  
+**Archivo:** `ejercicio4/scrape_instagram.py`  
 - **Descripción:** Obtiene la lista de seguidores de las cuentas:
   - `@elcorteingles`, `@mercadona`, `@carrefoures`
 - **Características:**
   - Para perfiles públicos: extrae nombre, correos, teléfonos, fecha de primera publicación.
   - Para perfiles privados: solo nombre; los demás campos se marcan como `Perfil privado`.
-  - Evita bloqueos usando intervalos entre bloques de 100.
+  - Evita bloqueos usando intervalos entre bloques de 10.
 - **Tecnologías Utilizadas:** Python, `instaloader`, `re`, `pandas`, `Excel`
 - **Ejecución:**
 ```bash
@@ -112,6 +112,13 @@ python scrape_instagram.py
 
 **Requisitos especiales:**
 - Iniciar sesión con tu cuenta de Instagram la primera vez (se guarda sesión).
+- Crear archivo `insta_credentials.json` dentro de la carpeta `ejercicio4`  y debe contener:
+```bash
+{
+  "USERNAME": "tu_usuario",
+  "PASSWORD": "tu_password"
+}
+```
 - Archivo de salida: `seguidores_instagram.xlsx`
 
 **Advertencia ética:**
@@ -122,7 +129,7 @@ python scrape_instagram.py
 
 ## 🔒 Seguridad
 
-- Contraseñas no se almacenan en código fuente (se recomienda usar sesión guardada).
+- Contraseñas no se almacenan en código fuente (se usa sesión guardada).
 - Scraping responsable con limitación de solicitudes.
 
 ---
@@ -137,9 +144,10 @@ prueba-northmarketh/
 │   └── scraping_mercadolibre.py
 ├── ejercicio3/
 │   ├── app.py
-│   ├── db.sqlite3
-├── ejercicio4_instagram/
-│   └── scrape_instagram.py
+│   └── db.sqlite3
+├── ejercicio4/
+│   ├── scrape_instagram.py
+│   ├── insta_credentials.json (contiene los datos de acceso)
 │   └── seguidores_instagram.xlsx (se genera tras ejecutar)
 ├── requirements.txt
 └── README.md
